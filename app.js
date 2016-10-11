@@ -1,20 +1,7 @@
-// MODULE
-var angularApp = angular.module('angularApp', []);
+var myApp = angular.module('myApp', ['ngMessages', 'ngResource']);
 
-// CONTROLLERS
-angularApp.controller('mainController', ['$scope','$log', '$filter', function ($scope,$log,$filter) {
+myApp.controller('mainController', function($scope, $log, $filter, $resource) {
     
-    console.log($scope);
-    console.log($log);
-    $log.log("Hello");
-    $log.info("This is some information");
-    $log.warn("Warning!!!");
+    console.log($resource);
     
-    $scope.name = 'John';
-    $scope.formatname = $filter('uppercase')($scope.name);
-    console.log($scope.formatname);
-}]);
-
-
-
-
+});
